@@ -1,11 +1,11 @@
 import './App.css'
+import HomeMenuPage from './Pages/home-menu'
 function App() {
   return (
-    <>
-      <div>
-        <h1>Hello</h1>
-      </div>
-    </>
+    <div className="w-screen">
+      <HomeMenuPage/>
+    </div>
+    
   )
 }
 export default App
