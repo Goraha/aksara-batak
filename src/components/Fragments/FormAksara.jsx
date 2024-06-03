@@ -11,9 +11,7 @@ const FormAksara = (props) => {
 
   const {title} = props
   const handleSubmit = (event) => {
-    event.preventDefault();// prevent page refresh
-    //window.location.href = "/products";
-    //window.alert(event.target.kalimat.value);
+    event.preventDefault();
     const kalimat = decsKalimat(event.target.kalimat.value);
     const result = kalimat.map(item => ({id: item ,name: item}));
     console.log(result);
@@ -26,8 +24,11 @@ const FormAksara = (props) => {
   }
   return (
     <Fragment>
-      <div className="w-full max-w-xs">
-        <h1 className="text-3xl font-bold mb-2 text-blue-500">{title}</h1>
+      <div className="w-full px-5 m-5">
+        <div className="flex justify-center">
+          <h1 className="text-3xl font-bold mb-2 text-blue-500">{title}</h1>
+        </div>
+        
         <form onSubmit={handleSubmit}>
           <InputAksara label="Kalimat" name="kalimat" type="text" placeholder="Kalimat...." rows="5" cols="5"/>
           <Button variant="bg-blue-500 w-full" type="submit">
@@ -36,19 +37,22 @@ const FormAksara = (props) => {
         </form>
       </div>
       
-      <div className="flex flex-wrap items-center w-full">
+      <div className="w-full">
+        <div className="flex flex-wrap items-center  min-h-28 border border-gray-500 m-5">
         {
           surats.map((item) =>{
             return(
-              <div className="w-1/4" key={item.id}>
-                <img src={`../public/images/aksara/${item.name}.png`} alt={`${item.name}`} />
-                
+              <div className="grid justify-items-center max-w-16" key={item.id}>
+                <img src={`./images/aksara/${item.name}.png`} alt={`${item.name}`} />
+                <p>{item.name}</p>
               </div>
             )
           })
           
         }
+        </div>
       </div>
+      
       
     </Fragment>
     

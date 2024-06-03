@@ -3,7 +3,7 @@ import FormAksara from "../Fragments/FormAksara";
 const InputAksara = () => {
   
   return (
-    <FormAksara title="How"/>
+    <FormAksara title="Aksara Simalungun"/>
     
   )
 }
