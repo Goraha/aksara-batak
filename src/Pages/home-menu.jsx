@@ -7,12 +7,12 @@ const HomeMenuPage = () => {
 				</div>
 				<div className="flex w-full h-full items-center justify-center">
 					<div className="w-1/2">
-						<div className="grid grid-cols-2 gap-4">
+						<div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
 							<div className="flex items-center justify-center h-32 rounded-md bg-indigo-950 cursor-pointer 
 							transition ease-in-out delay-150 bg-blue-500 hover:-translate-y-1 
 							hover:scale-110 hover:bg-indigo-900 duration-300"
 							onClick={() => {window.location.href = "/aksara-simalungun"}}>
-								<p className="text-white text-md font-rubik">Toba</p>
+								<p className="text-white text-md font-rubik">Karo</p>
 							</div>
 							<div className="flex items-center justify-center h-32 rounded-md bg-indigo-950 cursor-pointer 
 							transition ease-in-out delay-150 bg-blue-500 hover:-translate-y-1 
